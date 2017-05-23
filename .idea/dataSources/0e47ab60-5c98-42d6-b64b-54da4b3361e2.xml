@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="portal@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.1">
+    <root id="1"/>
+    <database id="2" parent="1" name="portal">
+      <ObjectId>16421</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-05-23.21:51:32.729</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1078</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="entity1_seq">
+      <ObjectId>17346</ObjectId>
+      <StateNumber>1070</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="10" parent="3" name="entity2_seq">
+      <ObjectId>17348</ObjectId>
+      <StateNumber>1071</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="11" parent="3" name="entity3_seq">
+      <ObjectId>17350</ObjectId>
+      <StateNumber>1072</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="12" parent="3" name="equipment">
+      <ObjectId>17352</ObjectId>
+      <StateNumber>1078</StateNumber>
+    </table>
+    <table id="13" parent="3" name="inventors">
+      <ObjectId>17360</ObjectId>
+      <StateNumber>1078</StateNumber>
+    </table>
+    <table id="14" parent="3" name="users">
+      <ObjectId>17365</ObjectId>
+      <StateNumber>1077</StateNumber>
+    </table>
+    <column id="15" parent="12" name="equipmentid">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1073</StateNumber>
+    </column>
+    <column id="16" parent="12" name="nameequipment">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1073</StateNumber>
+    </column>
+    <column id="17" parent="12" name="networkname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1073</StateNumber>
+    </column>
+    <index id="18" parent="12" name="equipment_pkey">
+      <ObjectId>17358</ObjectId>
+      <ColNames>equipmentid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="12" name="equipment_pkey">
+      <ObjectId>17359</ObjectId>
+      <ColNames>equipmentid</ColNames>
+      <UnderlyingIndexName>equipment_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1074</StateNumber>
+    </column>
+    <column id="21" parent="13" name="equipmentid">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1074</StateNumber>
+    </column>
+    <column id="22" parent="13" name="userid">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1074</StateNumber>
+    </column>
+    <index id="23" parent="13" name="inventors_pkey">
+      <ObjectId>17363</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="13" name="inventors_pkey">
+      <ObjectId>17364</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>inventors_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="25" parent="13" name="fk45a5n5dxt2i6a22367vdtgnlj">
+      <ObjectId>17380</ObjectId>
+      <ColNames>id</ColNames>
+      <RefTableName>equipment</RefTableName>
+      <RefKeyName>equipment_pkey</RefKeyName>
+      <RefColNames>equipmentid</RefColNames>
+    </foreign-key>
+    <foreign-key id="26" parent="13" name="fk26nwgd6kp4gnwlrbq9iqqnrpw">
+      <ObjectId>17370</ObjectId>
+      <ColNames>equipmentid</ColNames>
+      <RefTableName>equipment</RefTableName>
+      <RefKeyName>equipment_pkey</RefKeyName>
+      <RefColNames>equipmentid</RefColNames>
+    </foreign-key>
+    <foreign-key id="27" parent="13" name="fk6ewbd5qewea0gd3p9v1nxlrxu">
+      <ObjectId>17375</ObjectId>
+      <ColNames>userid</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>userid</RefColNames>
+    </foreign-key>
+    <column id="28" parent="14" name="userid">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1075</StateNumber>
+    </column>
+    <column id="29" parent="14" name="firstname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <StateNumber>1075</StateNumber>
+    </column>
+    <column id="30" parent="14" name="lastname">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>1075</StateNumber>
+    </column>
+    <index id="31" parent="14" name="users_pkey">
+      <ObjectId>17368</ObjectId>
+      <ColNames>userid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="14" name="users_pkey">
+      <ObjectId>17369</ObjectId>
+      <ColNames>userid</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
