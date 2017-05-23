@@ -1,5 +1,7 @@
+ru\digdes\site\ui\App.class
 ru\digdes\site\dao\impl\EquipmentDaoImpl.class
 ru\digdes\site\service\impl\EquipmentServiceImpl.class
+ru\digdes\site\ui\controllers\MainController.class
 ru\digdes\site\model\User.class
 ru\digdes\site\service\UserService.class
 ru\digdes\site\service\InventoryService.class
