@@ -35,10 +35,10 @@ public class Application {
     }
 
     public void run(){
-        User userNew= new User(null,"ilya","yaroslav");
+        User userNew= new User(null,"vasya","yaroslav");
         userService.addNewUser(userNew);
 
-        Equipment equipment = new Equipment(null,"1-02-nb-1111","102nb1111");
+        Equipment equipment = new Equipment(null,"1-02-nb-0000","102nb1111");
         equipmentService.addNewEquipment(equipment);
 
         Inventory inventory = new Inventory();
