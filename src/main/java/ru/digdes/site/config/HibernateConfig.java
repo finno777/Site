@@ -25,11 +25,6 @@ public class HibernateConfig {
     @Autowired
     private Environment env;
 
-    /**
-     * Initialize dataSource
-     *
-     * @return DataSource
-     */
     @Bean
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -40,11 +35,6 @@ public class HibernateConfig {
         return dataSource;
     }
 
-    /**
-     * Initialize hibernate properties
-     *
-     * @return Properties
-     */
     private Properties getHibernateProperties() {
         Properties properties = new Properties();
         properties.put(AvailableSettings.DIALECT, env.getRequiredProperty("hibernate.dialect"));
@@ -65,12 +55,6 @@ public class HibernateConfig {
     }
 
 
-    /**
-     * Initialize Transaction Manager
-     *
-     * @param sessionFactory
-     * @return HibernateTransactionManager
-     */
     @Bean
     public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
         HibernateTransactionManager txManager = new HibernateTransactionManager();

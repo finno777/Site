@@ -14,7 +14,6 @@ public interface UserDao {
 
     User findById(Serializable id);
 
-
     void deleteUser(long id);
 
     void updateUser(User user);

@@ -27,9 +27,7 @@ public class Equipment implements Serializable {
     @Column(name = "networkName")
     private String networkName;
 
-    public Equipment(){
-
-    }
+    public Equipment(){}
 
     public Equipment(Long id){this.id=id;}
 
@@ -38,6 +36,7 @@ public class Equipment implements Serializable {
         this.nameEquipment=nameEquipment;
         this.networkName=networkName;
     }
+
     public Long getId(){
         return id;
     }
@@ -55,7 +54,7 @@ public class Equipment implements Serializable {
     }
 
 
-    @OneToMany(mappedBy = "id", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "id", fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     private List<Inventory> inventories;
 
 }

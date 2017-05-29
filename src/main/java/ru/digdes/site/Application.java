@@ -1,8 +1,10 @@
 package ru.digdes.site;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
+import ru.digdes.site.MyUI.App;
 import ru.digdes.site.config.AppConfig;
 import ru.digdes.site.config.HibernateConfig;
 import ru.digdes.site.model.Equipment;
@@ -17,6 +19,7 @@ import ru.digdes.site.service.UserService;
  */
 @Component
 public class Application {
+    private static final Logger logger = Logger.getLogger(Application.class);
 
     @Autowired
     private UserService userService ;
@@ -35,12 +38,14 @@ public class Application {
     }
 
     public void run(){
+
         User userNew= new User(null,"vasya","yaroslav");
         userService.addNewUser(userNew);
-
-        Equipment equipment = new Equipment(null,"1-02-nb-0000","102nb1111");
+        logger.info("Юзер добавлен");
+        Equipment equipment = new Equipment(null,"1-02-nb-0000","102nb0000");
         equipmentService.addNewEquipment(equipment);
-
+        logger.info("Добалено оборудование");
+//
         Inventory inventory = new Inventory();
         inventory.setEquipment(equipment);
         inventory.setUser(userNew);
@@ -48,8 +53,7 @@ public class Application {
 
 //        User user= new User(null,"vasya","vasyall");
 //        userService.addNewUser(user);
-        // inventoryService.deleteInventory(1L);
+//         inventoryService.deleteInventory(1L);
 //        inventoryService.deleteInventory(3L);
-
     }
 }

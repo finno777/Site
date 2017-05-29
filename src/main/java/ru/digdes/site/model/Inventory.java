@@ -19,13 +19,13 @@ public class Inventory implements Serializable {
     private Long id;
 
     //привязка идет к объекту а не к конкретной переменной
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "userId")
     private User user;
 
 
     //привязка идет к объекту а не к конкретной переменной
-    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "equipmentId")
     private Equipment equipment;
 
@@ -49,9 +49,6 @@ public class Inventory implements Serializable {
 
     }
 
-
-
-
     public Long getId() {
         return id;
     }
@@ -59,7 +56,6 @@ public class Inventory implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-
-
+    
 
 }

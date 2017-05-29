@@ -17,7 +17,6 @@ public class InventoryServiceImpl implements InventoryService {
     @Autowired
     InventoryDao inventoryDao;
 
-
     @Override
     public Inventory getInventory(Long id) {
         return inventoryDao.findById(id);
@@ -32,7 +31,7 @@ public class InventoryServiceImpl implements InventoryService {
     public void deleteInventory(Long id){
         inventoryDao.deleteInventory(id);
     }
-
+    
     @Override
     public void updateInventory(Inventory inventory){
         inventoryDao.updateInventory(inventory);

@@ -53,6 +53,6 @@ public class User implements Serializable {
     }
 
 
-    @OneToMany (mappedBy = "id",fetch = FetchType.EAGER, cascade = CascadeType.ALL)//Связь с таблицой Инвентаризация
+    @OneToMany (mappedBy = "id",fetch = FetchType.EAGER, cascade = CascadeType.DETACH)//Связь с таблицой Инвентаризация
     private List<Inventory> inventories;
 }
