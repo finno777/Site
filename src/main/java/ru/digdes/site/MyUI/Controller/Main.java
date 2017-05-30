@@ -1,9 +1,11 @@
 package ru.digdes.site.MyUI.Controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import ru.digdes.site.model.User;
+import ru.digdes.site.service.UserService;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @Controller
 public class Main {
+    private UserService userService;
     @RequestMapping ("/")
 //    @ResponseBody
     public String index() {
@@ -27,5 +30,26 @@ public class Main {
         users.add(new User(null,"Ivan", "Ivanov"));
         return users;
     }
+    @RequestMapping("/user/add")
+    public String addUser(@ModelAttribute("user") User user){
+        if(user.getId()==0){
+            this.userService.addNewUser(user);
+        }
+        return "redirect:/getAllUsers";
+    }
+    @RequestMapping("/remove/{id}")
+    public String removeUser(@PathVariable ("id") Long id){
+
+        this.userService.deleteUser(id);
+        return "redirect:/getAllUsers";
+    }
+    @RequestMapping(value = "/persons/edit")
+    public String getEdit(@RequestParam (value="id", required=true) Long id,
+                          Model model) {
+        model.addAttribute("userAttribute", userService.getUser(id));
+
+        return "redirect:/getAllUsers";
+    }
+
 }
 

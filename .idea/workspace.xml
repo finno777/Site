@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ff45176-7964-4168-930d-48fa22504c10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/App.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/hell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/58983306-c517-4a0f-941b-d980b039381e/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/58983306-c517-4a0f-941b-d980b039381e/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/Application.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/config/HibernateConfig.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/config/HibernateConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/Equipment.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/Equipment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/Inventory.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/Inventory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/User.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/InventoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/InventoryServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site.iml" afterPath="$PROJECT_DIR$/Site.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/Application.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/config/HibernateConfig.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/config/HibernateConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/Equipment.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/Equipment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/Inventory.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/Inventory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/InventoryService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/InventoryService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/InventoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/InventoryServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/properties.properties" afterPath="$PROJECT_DIR$/src/main/resources/properties.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,7 +79,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="478">
@@ -118,6 +97,18 @@
               <folding>
                 <element signature="e#288#289#0" expanded="true" />
                 <element signature="e#346#347#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="587">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,24 +178,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InventoryServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/InventoryServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#586#587#0" expanded="false" />
-                <element signature="e#634#635#0" expanded="false" />
-                <element signature="e#704#705#0" expanded="false" />
-                <element signature="e#748#749#0" expanded="false" />
-                <element signature="e#926#927#0" expanded="false" />
-                <element signature="e#981#982#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -251,6 +224,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Master" />
         <option value="finno777 &lt;ilya.jarsl@yandex.ru&gt;" />
       </list>
     </option>
@@ -287,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/hello.htm" />
         <option value="$PROJECT_DIR$/src/main/resources/hello.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/jquery.jtable.js" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
         <option value="dbsequence:/85095fec/58983306-c517-4a0f-941b-d980b039381e/site.public.entity1_seq" />
         <option value="dbsequence:/85095fec/58983306-c517-4a0f-941b-d980b039381e/site.public.entity2_seq" />
         <option value="dbsequence:/85095fec/58983306-c517-4a0f-941b-d980b039381e/site.public.entity3_seq" />
@@ -304,6 +277,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/InventoryServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
       </list>
     </option>
   </component>
@@ -447,6 +421,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -959,7 +997,7 @@
       <workItem from="1495660163430" duration="2443000" />
       <workItem from="1495662809843" duration="21187000" />
       <workItem from="1495797603702" duration="4810000" />
-      <workItem from="1496064380226" duration="3135000" />
+      <workItem from="1496064380226" duration="5062000" />
     </task>
     <task id="LOCAL-00001" summary="spr-boot">
       <created>1495663146264</created>
@@ -972,7 +1010,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58814000" />
+    <option name="totallyTimeSpent" value="60741000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1182,14 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-593">
           <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1475,6 +1505,16 @@
         <state relative-caret-position="478">
           <caret line="46" column="45" lean-forward="true" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
