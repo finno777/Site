@@ -3,7 +3,9 @@ package ru.digdes.site.MyUI.Controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import ru.digdes.site.model.Equipment;
 import ru.digdes.site.model.User;
+import ru.digdes.site.service.EquipmentService;
 import ru.digdes.site.service.UserService;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
@@ -17,12 +19,13 @@ import java.util.List;
 @Controller
 public class Main {
     private UserService userService;
+    private EquipmentService equipmentService;
     @RequestMapping ("/")
 //    @ResponseBody
     public String index() {
         return "hello.html";
     }
-
+    //US
     @RequestMapping("/getAllUsers")
     @ResponseBody
     public List<User> getAllUsers(){
@@ -37,19 +40,36 @@ public class Main {
         }
         return "redirect:/getAllUsers";
     }
-    @RequestMapping("/remove/{id}")
+    @RequestMapping("/remove/user/{id}")
     public String removeUser(@PathVariable ("id") Long id){
 
         this.userService.deleteUser(id);
         return "redirect:/getAllUsers";
     }
-    @RequestMapping(value = "/persons/edit")
-    public String getEdit(@RequestParam (value="id", required=true) Long id,
-                          Model model) {
-        model.addAttribute("userAttribute", userService.getUser(id));
-
-        return "redirect:/getAllUsers";
+    @RequestMapping("user/edit")
+    public User getUserById(@RequestParam(value = "id",required = true) Long id){
+        return userService.getUser(id);
     }
-
+    //EQ
+    @RequestMapping("/getAllEquipment")
+    public List<Equipment> getAllEquipment(){
+        List<Equipment> equipments =new ArrayList<>();
+        equipments.add(new Equipment(null,"104","104"));
+        return equipments;
+    }
+    @RequestMapping("/equipment/add")
+    public String addEquipment(@ModelAttribute("equipment") Equipment equipment){
+        this.equipmentService.addNewEquipment(equipment);
+        return "redirect:/getAllEquipment";
+    }
+    @RequestMapping("/remove/equipment/{id}")
+    public String removeEquipment(@PathVariable("id") Long id){
+        this.equipmentService.deleteEquipment(id);
+        return "redirect:/getAllEquipment";
+    }
+    @RequestMapping("equipment/edit")
+    public Equipment getEquipmentById(@RequestParam(value = "id",required = true) Long id){
+        return equipmentService.getEquipment(id);
+    }
 }
 
