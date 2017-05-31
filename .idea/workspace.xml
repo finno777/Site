@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4ff45176-7964-4168-930d-48fa22504c10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1022,7 +1021,7 @@
       <workItem from="1495660163430" duration="2443000" />
       <workItem from="1495662809843" duration="21187000" />
       <workItem from="1495797603702" duration="4810000" />
-      <workItem from="1496064380226" duration="12266000" />
+      <workItem from="1496064380226" duration="12305000" />
     </task>
     <task id="LOCAL-00001" summary="spr-boot">
       <created>1495663146264</created>
@@ -1031,11 +1030,18 @@
       <option name="project" value="LOCAL" />
       <updated>1495663146264</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="spr-boot">
+      <created>1496223983702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496223983702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67945000" />
+    <option name="totallyTimeSpent" value="67984000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1047,7 +1053,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
