@@ -22,7 +22,7 @@ public class InventoryDaoImpl implements InventoryDao{
     @Override
     public Serializable save(Inventory inventory){return  getSession().save(inventory);}
     @Override
-    public Inventory findById(final Serializable id){return  getSession().get(Inventory.class,id);}
+    public Inventory findById(final Serializable id){return (Inventory) getSession().get(Inventory.class, id);}
 
     @Override
     public void deleteInventory(long id){

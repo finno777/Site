@@ -17,16 +17,18 @@ import java.util.List;
 public class EquipmentDaoImpl implements EquipmentDao {
     @Autowired
     private SessionFactory sessionFactory;
+
     protected Session getSession(){
         return this.sessionFactory.getCurrentSession();
     }
+
     @Override
     public Serializable save(Equipment equipment) {
         return getSession().save(equipment);
     }
     @Override
     public Equipment findById(final Serializable id) {
-        return getSession().get(Equipment.class, id);
+        return (Equipment)getSession().get(Equipment.class, id);
     }
     @Override
     public void deleteEquipment(long id){

@@ -1,14 +1,18 @@
 package ru.digdes.site.MyUI.Controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import ru.digdes.site.model.Equipment;
 import ru.digdes.site.model.User;
 import ru.digdes.site.service.EquipmentService;
 import ru.digdes.site.service.UserService;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import ru.digdes.site.service.impl.UserServiceImpl;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,58 +22,63 @@ import java.util.List;
 
 @Controller
 public class Main {
-    private UserService userService;
-    private EquipmentService equipmentService;
+@Autowired
+    UserService userService;
+    @Autowired
+    EquipmentService equipmentService;
+
     @RequestMapping ("/")
 //    @ResponseBody
     public String index() {
         return "hello.html";
     }
-    //US
+    //work
     @RequestMapping("/getAllUsers")
     @ResponseBody
     public List<User> getAllUsers(){
-        List<User> users = new ArrayList<>();
-        users.add(new User(null,"Ivan", "Ivanov"));
-        return users;
+        List<User> all = userService.getAll();
+        return all;
     }
+    //work
     @RequestMapping("/user/add")
-    public String addUser(@ModelAttribute("user") User user){
-        if(user.getId()==0){
-            this.userService.addNewUser(user);
-        }
+    public String addUser(@RequestParam(value = "firstName") String firstname, @RequestParam(value = "lastName") String lastname ){
+        User user = new User(null, firstname,lastname);
+        this.userService.addNewUser(user);
         return "redirect:/getAllUsers";
     }
+    //work
     @RequestMapping("/remove/user/{id}")
     public String removeUser(@PathVariable ("id") Long id){
-
+        User user =new User(id);
+        user.getId();
         this.userService.deleteUser(id);
         return "redirect:/getAllUsers";
     }
-    @RequestMapping("user/edit")
-    public User getUserById(@RequestParam(value = "id",required = true) Long id){
-        return userService.getUser(id);
-    }
+//    @RequestMapping(value ="user/edit/{id}")
+//    public User getUserById(@RequestParam(value = "id",required = true) Long id){
+//        return userService.getUser(id);
+//    }
     //EQ
     @RequestMapping("/getAllEquipment")
     public List<Equipment> getAllEquipment(){
-        List<Equipment> equipments =new ArrayList<>();
-        equipments.add(new Equipment(null,"104","104"));
+        List<Equipment> equipments =equipmentService.getAllEquipment();
         return equipments;
     }
     @RequestMapping("/equipment/add")
-    public String addEquipment(@ModelAttribute("equipment") Equipment equipment){
-        this.equipmentService.addNewEquipment(equipment);
+    public String addEquipment(@RequestParam(value = "nameEquipment") String nameEquipment,@RequestParam(value = "networkName") String networkName){
+        Equipment equipment=new Equipment(null,nameEquipment,networkName);
         return "redirect:/getAllEquipment";
     }
     @RequestMapping("/remove/equipment/{id}")
     public String removeEquipment(@PathVariable("id") Long id){
+        Equipment equipment=new Equipment(id);
+        equipment.getId();
         this.equipmentService.deleteEquipment(id);
         return "redirect:/getAllEquipment";
     }
-    @RequestMapping("equipment/edit")
-    public Equipment getEquipmentById(@RequestParam(value = "id",required = true) Long id){
-        return equipmentService.getEquipment(id);
-    }
+//    @RequestMapping("equipment/edit")
+//    public Equipment getEquipmentById(@RequestParam(value = "id",required = true) Long id){
+//        return equipmentService.getEquipment(id);
+//    }
 }
 

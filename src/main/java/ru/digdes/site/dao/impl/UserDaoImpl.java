@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao {
         return getSession().save(user);
     }
     @Override
-    public User findById(final  Serializable id){return getSession().get(User.class, id);}
+    public User findById(final  Serializable id){return (User)getSession().get(User.class, id);}
 
     @Override
     public void deleteUser(long id) {
