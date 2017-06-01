@@ -10,26 +10,35 @@
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.84/jsrender.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
-    <button id="addUser">Добавить пользователя</button>
+    <button id="addUser" href="#" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span>  Добавить пользователя</button>
     <div id="usersList"></div>
 
     <div id="addUserForm" class="form">
         <h4>Добавить пользователя</h4>
         <input type="text" id="firstName" placeholder="Имя">
         <input type="text" id="lastName" placeholder="Фамилия">
-        <button id="submitUserForm">Добавить</button>
-        <button id="cancelUserForm">Отмена</button>
+        <button id="submitUserForm" href="#" class="btn btn-info">Добавить</button>
+        <button id="cancelUserForm" href="#" class="btn btn-info">Отмена</button>
     </div>
 
     <div id="editUserForm" class="form">
         <h4>Редактировать пользователя</h4>
         <input type="text" id="newFirstName" placeholder="Имя">
         <input type="text" id="newLastName" placeholder="Фамилия">
-        <button id="submitEditForm">Добавить</button>
-        <button id="cancelEditForm">Отмена</button>
+        <button id="submitEditForm" href="#" class="btn btn-info">Изменить</button>
+        <button id="cancelEditForm" href="#" class="btn btn-info">Отмена</button>
     </div>
 
     <script id="allUsers" type="text/x-jsrender">
@@ -37,7 +46,7 @@
             {{for users}}
               <li data-id="{{:id}}">
                 <span>{{:firstName}} {{:lastName}}</span>
-                <button class="editUser">Редактировать</button>
+                <button class="editUser" >Редактировать</button>
                 <button class="removeUser">Удалить</button>
               </li>
             {{/for}}

@@ -23,7 +23,7 @@ $(document).ready(function() {
 
         var removeUser = function(id, callback) {
             $.ajax({
-                url: "/remove/user/" + id,
+                url: "/user/remove/" + id,
                 success: function(data) {
                     callback(data);
                 }

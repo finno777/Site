@@ -47,17 +47,19 @@ public class Main {
         return "redirect:/getAllUsers";
     }
     //work
-    @RequestMapping("/remove/user/{id}")
+    @RequestMapping("/user/remove/{id}")
     public String removeUser(@PathVariable ("id") Long id){
         User user =new User(id);
         user.getId();
         this.userService.deleteUser(id);
         return "redirect:/getAllUsers";
     }
-//    @RequestMapping(value ="user/edit/{id}")
-//    public User getUserById(@RequestParam(value = "id",required = true) Long id){
-//        return userService.getUser(id);
-//    }
+    @RequestMapping(value ="user/edit/{id}")
+    public User updateUser(@RequestParam(value = "firstName") String firstname, @RequestParam(value = "lastName") String lastname ){
+        User user = new User(null, firstname,lastname);
+        this.userService.updateUser(user);
+        return user;
+    }
     //EQ
     @RequestMapping("/getAllEquipment")
     public List<Equipment> getAllEquipment(){
