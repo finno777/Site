@@ -24,22 +24,25 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Serializable save(User user){
+    public Serializable save(User user) {
         return getSession().save(user);
     }
+
     @Override
-    public User findById(final  Serializable id){return (User)getSession().get(User.class, id);}
+    public User findById(Long id) {
+        return (User) getSession().get(User.class, id);
+    }
 
     @Override
     public void deleteUser(long id) {
-        User user=findById(id);
-        if(user!= null)
+        User user = findById(id);
+        if (user != null)
             getSession().delete(user);
     }
 
     @Override
-    public void updateUser(User user){
-        User userToUpdate=findById(user.getId());
+    public void updateUser(User user) {
+        User userToUpdate = findById(user.getId());
         userToUpdate.setFirstName(user.getFirstName());
         userToUpdate.setLastName(user.getLastName());
         getSession().update(userToUpdate);

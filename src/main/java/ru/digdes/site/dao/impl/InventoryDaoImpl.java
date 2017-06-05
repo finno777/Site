@@ -8,6 +8,7 @@ import ru.digdes.site.dao.InventoryDao;
 import ru.digdes.site.model.Inventory;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by Yaroslavtsev.I on 23.05.2017.
@@ -39,5 +40,10 @@ public class InventoryDaoImpl implements InventoryDao{
         getSession().update(inventoryToUpdate);
     }
 
+    @Override
+    public List<Inventory> getAll() {return getSession().createCriteria(Inventory.class).list();
+        }
+    }
 
-}
+
+

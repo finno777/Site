@@ -29,6 +29,10 @@ public class Inventory implements Serializable {
     @JoinColumn(name = "equipmentId")
     private Equipment equipment;
 
+    public Inventory() {
+
+    }
+
     public User getUser() {
         return user;
     }
@@ -43,10 +47,6 @@ public class Inventory implements Serializable {
 
     public void setEquipment(Equipment equipment) {
         this.equipment = equipment;
-    }
-
-    public Inventory(){
-
     }
 
     public Long getId() {

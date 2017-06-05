@@ -1,3 +1,7 @@
 .form {
     display: none;
 }
+
+.tab-content {
+	margin: 20px;
+}

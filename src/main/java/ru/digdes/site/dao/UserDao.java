@@ -12,7 +12,7 @@ public interface UserDao {
 
     Serializable save(User user);
 
-    User findById(Serializable id);
+    User findById(Long id);
 
     void deleteUser(long id);
 

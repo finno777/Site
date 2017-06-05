@@ -7,6 +7,8 @@ import ru.digdes.site.dao.InventoryDao;
 import ru.digdes.site.model.Inventory;
 import ru.digdes.site.service.InventoryService;
 
+import java.util.List;
+
 /**
  * Created by Yaroslavtsev.I on 23.05.2017.
  */
@@ -36,5 +38,11 @@ public class InventoryServiceImpl implements InventoryService {
     public void updateInventory(Inventory inventory){
         inventoryDao.updateInventory(inventory);
     }
+
+    @Override
+    public List<Inventory> getAll() {
+        return inventoryDao.getAll();
+    }
+
 }
 
