@@ -93,13 +93,14 @@ public class Main {
         this.equipmentService.updateEquipment(equipment);
         return "redirect:/getAllEquipment";
     }
-    //Inventory
+//    Inventory
     @RequestMapping("/getAllInventory")
     @ResponseBody
     public List<Inventory> getAllInventory(){
         List<Inventory> all=inventoryService.getAll();
         return all;
     }
+
     //TODO додделать
     @RequestMapping("/inventory/add")
     public String addInventory(@RequestParam(value = "userId") Long userId,@RequestParam(value = "equipmentId") Long equipmentId){
@@ -111,7 +112,7 @@ public class Main {
         inventoryService.addNewInventory(inventory);
         return  "redirect:/getAllInventory";
     }
-    @RequestMapping("/inventory/remove")
+    @RequestMapping("/inventory/remove/{id}")
     public String removeInventory(@PathVariable("id")Long id){
         Inventory inventory=new Inventory();
         inventory.getId();

@@ -1,5 +1,7 @@
 package ru.digdes.site.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
@@ -52,7 +54,7 @@ public class User implements Serializable {
         this.lastName=lastName;
     }
 
-
+    @JsonIgnore
     @OneToMany (mappedBy = "id",fetch = FetchType.EAGER, cascade = CascadeType.DETACH)//Связь с таблицой Инвентаризация
     private List<Inventory> inventories;
 }

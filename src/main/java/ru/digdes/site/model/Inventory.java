@@ -1,5 +1,7 @@
 package ru.digdes.site.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -19,18 +21,19 @@ public class Inventory implements Serializable {
     private Long id;
 
     //привязка идет к объекту а не к конкретной переменной
+    @JsonProperty("userId")
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "userId")
     private User user;
 
 
     //привязка идет к объекту а не к конкретной переменной
+    @JsonProperty("equipmentId")
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "equipmentId")
     private Equipment equipment;
 
     public Inventory() {
-
     }
 
     public User getUser() {

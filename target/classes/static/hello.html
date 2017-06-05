@@ -23,75 +23,83 @@
 	
 	<div class="tab-content">
 	  <div id="Users" class="tab-pane fade in active">
-			<button id="addUser">Добавить пользователя</button>
+			<button id="addUser" class="btn btn-primary">Добавить пользователя</button>
 			<div id="usersList"></div>
 			
 			<div id="addUserForm" class="form">
 				<h4>Добавить пользователя</h4>
 				<input type="text" id="firstName" placeholder="Имя">
 				<input type="text" id="lastName" placeholder="Фамилия">
-				<button id="submitUserForm">Добавить</button>
-				<button id="cancelUserForm">Отмена</button>
+				<button id="submitUserForm" class="btn btn-default">Добавить</button>
+				<button id="cancelUserForm" class="btn btn-default">Отмена</button>
 			</div>
 
 			<div id="editUserForm" class="form">
 				<h4>Редактировать пользователя</h4>
 				<input type="text" id="newFirstName" placeholder="Имя">
 				<input type="text" id="newLastName" placeholder="Фамилия">
-				<button id="submitEditForm">Добавить</button>
-				<button id="cancelEditForm">Отмена</button>
+				<button id="submitEditForm" class="btn btn-default">Добавить</button>
+				<button id="cancelEditForm" class="btn btn-default">Отмена</button>
 			</div>
 	  </div>
 	  
 	  <div id="Equipment" class="tab-pane fade">
-		<button id="addEquipment">Добавить оборудование</button>
+		<button id="addEquipment" class="btn btn-primary">Добавить оборудование</button>
 		<div id="equipmentsList"></div>
 		
 		<div id="addEquipmentForm" class="form">
 			<h4>Добавить оборудование</h4>
 			<input type="text" id="equipmentName" placeholder="Название">
 			<input type="text" id="networkName" placeholder="Сеть">
-			<button id="submitEquipmentForm">Добавить</button>
-			<button id="cancelEquipmentForm">Отмена</button>
+			<button id="submitEquipmentForm" class="btn btn-default">Добавить</button>
+			<button id="cancelEquipmentForm" class="btn btn-default">Отмена</button>
 		</div>
 
 		<div id="editEquipmentForm" class="form">
 			<h4>Редактировать оборудование</h4>
 			<input type="text" id="newEquipmentName" placeholder="Название">
 			<input type="text" id="newNetworkName" placeholder="Сеть">
-			<button id="submitEditEquipmentForm">Добавить</button>
-			<button id="cancelEditEquipmentForm">Отмена</button>
+			<button id="submitEditEquipmentForm" class="btn btn-default">Добавить</button>
+			<button id="cancelEditEquipmentForm" class="btn btn-default">Отмена</button>
 		</div>
 	  </div>
 	  
 	  <div id="Inventarisation" class="tab-pane fade">
-		<button id="addInventar">Добавить инвентарь</button>
+		<button id="addInventar" class="btn btn-primary">Добавить инвентарь</button>
 		<div id="inventarList"></div>
 		
-		<div id="addInventarForm" class="form">
-			<h4>Добавить инвентарь</h4>
-			<input type="text" id="inventarName" placeholder="Название">
-			<button id="submitInventarForm">Добавить</button>
-			<button id="cancelInventarForm">Отмена</button>
-		</div>
-
-		<div id="editInventarForm" class="form">
-			<h4>Редактировать инвентарь</h4>
-			<input type="text" id="newInventarName" placeholder="Название">
-			<button id="submitEditInventarForm">Добавить</button>
-			<button id="cancelEditInventarForm">Отмена</button>
-		</div>
+		<div id="addInventarForm" class="form"></div>
 	  </div>
 	</div>
 
 
+	<script id="addInventarFormTemplate" type="text/x-jsrender">
+		<h4>Добавить инвентарь</h4>
+	
+		<select id="inventarUserId">
+			{{for users}}
+			<option value="{{:id}}">{{:firstName}}</option>
+			{{/for}}
+		</select>
+		
+		<select id="inventarEquipmentId">
+			{{for equipment}}
+			<option value="{{:id}}">{{:nameEquipment}}</option>
+			{{/for}}
+		</select>
+	
+	
+		<button id="submitInventarForm" class="btn btn-default">Добавить</button>
+		<button id="cancelInventarForm" class="btn btn-default">Отмена</button>
+	</script>
+	
     <script id="allUsers" type="text/x-jsrender">
         <ul>
             {{for users}}
               <li data-id="{{:id}}">
                 <span>{{:firstName}} {{:lastName}}</span>
-                <button class="editUser">Редактировать</button>
-                <button class="removeUser">Удалить</button>
+                <button class="editUser btn btn-default">Редактировать</button>
+                <button class="removeUser btn btn-default">Удалить</button>
               </li>
             {{/for}}
         </ul>
@@ -102,8 +110,8 @@
             {{for equipment}}
               <li data-id="{{:id}}">
                 <span>{{:nameEquipment}} {{:networkName}}</span>
-                <button class="editEquipment">Редактировать</button>
-                <button class="removeEquipment">Удалить</button>
+                <button class="editEquipment btn btn-default">Редактировать</button>
+                <button class="removeEquipment btn btn-default">Удалить</button>
               </li>
             {{/for}}
         </ul>
@@ -113,9 +121,9 @@
         <ul>
             {{for inventar}}
               <li data-id="{{:id}}">
-                <span>{{:name}}</span>			<!-- Поскольку инвентаря нет я ставлю дефолтное значение, потом когда будет готов бекенд поменять! -->
-                <button class="editInventar">Редактировать</button>
-                <button class="removeInventar">Удалить</button>
+                <span>{{:userId.firstName}}</span>
+				<span>{{:equipmentId.nameEquipment}}</span>
+                <button class="removeInventar btn btn-default">Удалить</button>
               </li>
             {{/for}}
         </ul>

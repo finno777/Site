@@ -65,7 +65,7 @@ $(document).ready(function() {
 
         var removeEquipment = function(id, callback) {
             $.ajax({
-                url: "/remove/equipment/" + id,
+                url: "/equipment/remove/" + id,
                 success: function(data) {
                     callback(data);
                 }
@@ -82,7 +82,36 @@ $(document).ready(function() {
                 }
             });
         };
-		
+
+
+        var getAllInventar = function(callback) {
+            $.ajax({
+                url: "/getAllInventory",
+                success: function(data) {
+                    callback(data);
+                }
+            });
+        };
+
+        var addInventar = function(info, callback) {
+            $.ajax({
+                url: "/inventory/add/",
+                data: info,
+                dataType: 'json',
+                success: function(data) {
+                    callback(data);
+                }
+            });
+        };
+
+        var removeInventar = function(id, callback) {
+            $.ajax({
+                url: "/inventory/remove/" + id,
+                success: function(data) {
+                    callback(data);
+                }
+            });
+        };
 		
 		
         return {
@@ -97,9 +126,8 @@ $(document).ready(function() {
             editEquipment: editEquipment,
 			
 			getAllInventar: getAllInventar,
-			addInventar: addInventar
-            /* removeInventar: removeInventar,
-            editInventar: editInventar,*/
+			addInventar: addInventar,
+            removeInventar: removeInventar,
         };
     };
 
@@ -242,75 +270,40 @@ $(document).ready(function() {
                 renderListOfEquipment();
             });
         });
+		
+		
 
 		/*-------------ADD Inventar-------------*/
         $(document).on("click", "#addInventar", function() {
+			renderInventarOptions();
             $("#addInventarForm").show();
         });
 
         $(document).on("click", "#submitInventarForm", function() {
             var info = {};
-            info.nameInventar = $("#inventarName").val();
+            info.userId = $("#inventarUserId").val();
+			info.equipmentId = $("#inventarEquipmentId").val();
 
             API().addInventar(info, function(data){
                 renderListOfInventar();
             });
-            $("#inventarName").val("");
 
             $("#addInventarForm").hide();
         });
 
         $(document).on("click", "#cancelInventarForm", function() {
-            $("#inventarName").val("");
-
             $("#addInventarForm").hide();
         });
 
-        /*-------------EDIT removeInventar-------------*/
-        /*$(document).on("click", ".editInventar", function() {
-            $("#editInventarForm").attr('data-id', $(this).parent("li").attr("data-id"));
-            $("#editInventarForm").show();
-        });
-
-        $(document).on("click", "#submitEditEquipmentForm", function() {
-            var id = $(this).parent("#editInventarForm").attr("data-id");
-
-            var info = {};
-            info.nameInventar = $("#newInventarName").val();
-
-             API().editInventar(id, info, function(data){
-                 renderListOfInventar();
-             });
-
-            $("#newInventarName").val("");
-
-            $("#editInventarForm").hide();
-        });
-
-        $(document).on("click", "#cancelEditInventarForm", function() {
-            $("#newInventarName").val("");
-
-            $("#editInventarForm").hide();
-        });*/
-
 
         /*-------------REMOVE removeInventar-------------*/
-        /*$(document).on("click", ".removeInventar", function() {
+        $(document).on("click", ".removeInventar", function() {
             var id = $(this).parent("li").attr("data-id");
 
             API().removeInventar(id, function(data){
                 renderListOfInventar();
             });
-        });*/
-
-	
-	
-	
-	
-	
-	
-	
-	
+        });
 	
 	};
 
@@ -318,7 +311,7 @@ $(document).ready(function() {
     function run() {
         renderListOfUsers();
 		renderListOfEquipment();
-		//renderListOfInventar();
+		renderListOfInventar();
     };
 
     function renderListOfUsers() {
@@ -339,13 +332,28 @@ $(document).ready(function() {
         });
     }
 	
-	/*function renderListOfInventar() {
+	function renderListOfInventar() {
         API().getAllInventar(function(data){
             var tmpl = $.templates("#allInventar");
             var inventar = data;
-            var data = {inventar: invent};
+            var data = {inventar: inventar};
             $("#inventarList").html(tmpl.render(data));
         });
-    }*/
+    }
+	
+	function renderInventarOptions() {
+		var dataToRender = {users: [], equipment: []};
+		
+		API().getAllUsers(function(data){
+			dataToRender.users = data;
+			
+			API().getAllEquipment(function(data){
+				dataToRender.equipment = data;
+
+                $("#addInventarForm").html($("#addInventarFormTemplate").render(dataToRender));
+			});
+        });
+		
+	};
 
 });

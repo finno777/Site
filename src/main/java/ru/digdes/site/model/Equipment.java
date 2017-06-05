@@ -1,5 +1,6 @@
 package ru.digdes.site.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -53,7 +54,7 @@ public class Equipment implements Serializable {
         this.networkName=networkName;
     }
 
-
+    @JsonIgnore
     @OneToMany(mappedBy = "id", fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     private List<Inventory> inventories;
 

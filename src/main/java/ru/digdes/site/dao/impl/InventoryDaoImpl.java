@@ -41,7 +41,7 @@ public class InventoryDaoImpl implements InventoryDao{
     }
 
     @Override
-    public List<Inventory> getAll() {return getSession().createCriteria(Inventory.class).list();
+    public List<Inventory> getAll() {return  getSession().createCriteria(Inventory.class).list();
         }
     }
 
