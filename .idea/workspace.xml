@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ff45176-7964-4168-930d-48fa22504c10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/MyUI/Controller/Main.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/MyUI/Controller/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/InventoryDao.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/InventoryDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/impl/InventoryDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/impl/InventoryDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/impl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/impl/UserDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/Inventory.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/model/Inventory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/InventoryService.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/InventoryService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/InventoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/InventoryServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/hell.js" afterPath="$PROJECT_DIR$/target/classes/static/hell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/hello.html" afterPath="$PROJECT_DIR$/target/classes/static/hello.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/styles.css" afterPath="$PROJECT_DIR$/target/classes/static/styles.css" />
-    </list>
+    <list default="true" id="4ff45176-7964-4168-930d-48fa22504c10" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -140,8 +125,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="103" column="25" lean-forward="true" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+            <state relative-caret-position="756">
+              <caret line="118" column="42" lean-forward="false" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -299,8 +284,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/InventoryServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/Inventory.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/hell.js" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
       </list>
     </option>
   </component>
@@ -1238,7 +1223,7 @@
       <workItem from="1496235051802" duration="9193000" />
       <workItem from="1496303770546" duration="26890000" />
       <workItem from="1496577843266" duration="213000" />
-      <workItem from="1496580767315" duration="10858000" />
+      <workItem from="1496580767315" duration="11635000" />
     </task>
     <task id="LOCAL-00001" summary="spr-boot">
       <created>1495663146264</created>
@@ -1261,11 +1246,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496648163441</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="spr-boot">
+      <created>1496648943111</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496648943111</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120438000" />
+    <option name="totallyTimeSpent" value="121215000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1291,7 +1283,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15261473" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05122732" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49199572" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1793,8 +1785,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="103" column="25" lean-forward="true" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+        <state relative-caret-position="756">
+          <caret line="118" column="42" lean-forward="false" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
