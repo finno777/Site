@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ff45176-7964-4168-930d-48fa22504c10" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/hell.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/hello.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/styles.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/MyUI/Controller/Main.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/MyUI/Controller/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/InventoryDao.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/InventoryDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/dao/UserDao.class" />
@@ -15,15 +12,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/InventoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/InventoryServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ru/digdes/site/service/impl/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/MyUI/Controller/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/InventoryDao.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/InventoryDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/impl/InventoryDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/impl/InventoryDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/dao/impl/UserDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/Inventory.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/model/Inventory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/InventoryService.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/InventoryService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/InventoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ru/digdes/site/service/impl/InventoryServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/hell.js" afterPath="$PROJECT_DIR$/target/classes/static/hell.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/hello.html" afterPath="$PROJECT_DIR$/target/classes/static/hello.html" />
@@ -259,8 +247,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Master" />
         <option value="finno777 &lt;ilya.jarsl@yandex.ru&gt;" />
+        <option value="Master" />
       </list>
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -1250,7 +1238,7 @@
       <workItem from="1496235051802" duration="9193000" />
       <workItem from="1496303770546" duration="26890000" />
       <workItem from="1496577843266" duration="213000" />
-      <workItem from="1496580767315" duration="10828000" />
+      <workItem from="1496580767315" duration="10858000" />
     </task>
     <task id="LOCAL-00001" summary="spr-boot">
       <created>1495663146264</created>
@@ -1266,11 +1254,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496223983702</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="spr-boot">
+      <created>1496648163441</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1496648163441</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120408000" />
+    <option name="totallyTimeSpent" value="120438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
