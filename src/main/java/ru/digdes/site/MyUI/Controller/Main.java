@@ -111,5 +111,12 @@ public class Main {
         inventoryService.addNewInventory(inventory);
         return  "redirect:/getAllInventory";
     }
+    @RequestMapping("/inventory/remove")
+    public String removeInventory(@PathVariable("id")Long id){
+        Inventory inventory=new Inventory();
+        inventory.getId();
+        this.inventoryService.deleteInventory(id);
+        return "redirect:/getAllInventory";
+    }
 }
 
